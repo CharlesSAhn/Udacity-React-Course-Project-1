@@ -6,7 +6,6 @@ import PropTypes from 'prop-types'
 class SearchPage extends Component{
 
     static propTypes = {
-        searchBookList: PropTypes.array.isRequired,
         updateBookShelf: PropTypes.func.isRequired,
         searchByTitleOrAuthor: PropTypes.func.isRequired
     };
@@ -43,7 +42,6 @@ class SearchPage extends Component{
                                  }
                     />
                 </div>
-
 
                 //results
                 <div>
