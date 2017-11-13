@@ -26,9 +26,14 @@ class BooksApp extends React.Component {
   };
 
   updateBookShelf = (book, shelf) => {
-    BooksAPI.update(book, shelf).then( () => {
-      book.shelf = shelf;
-      this.setState({bookList: this.state.bookList.filter( b => b.id !== book.id).concat([book])})
+    BooksAPI.update(book, shelf).then( (updatedBookList) => {
+
+      //check if the update response includes the book.id is in the updated shelf field.
+      if(updatedBookList[shelf].includes(book.id)){
+        book.shelf = shelf;
+        this.setState({bookList: this.state.bookList.filter( b => b.id !== book.id).concat([book])})
+      }
+
     })
   };
 
