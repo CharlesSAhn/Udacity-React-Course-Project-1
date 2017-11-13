@@ -30,7 +30,7 @@ class Bookshelf extends Component{
                                    updateBookShelf={updateBookShelf}/>
 
                             <div className="open-search">
-                                <Link to="/create"> + </Link>
+                                <Link to="/search"> + </Link>
                             </div>
 
                         </div>
